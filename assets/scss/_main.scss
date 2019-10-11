@@ -1,0 +1,362 @@
+*{
+    box-sizing: border-box;
+}
+.wedo {
+    margin-top: 45px;
+    text-align: center;
+    padding-left: 140px;
+    padding-right: 140px;
+    // position: absolute;
+
+    p {
+        color: $color-gray;
+    }
+}
+
+.main {
+    position: relative;
+
+    &__chat {
+        position: absolute;
+        
+        
+
+
+
+
+
+        &-window {
+            flex-direction: column;
+            display: flex;
+            height: 450px;
+            border: $color-gray solid 2px;
+            border-radius: 10px;
+            height: 450px;
+            width: 0;
+            justify-content: space-between;
+            overflow: hidden;
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+                width: 300px;
+
+            }
+            
+
+
+
+
+            
+                &__header {
+                    display: flex;
+                    flex-direction: row;
+                    background-color: #000;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 50px;
+                    color: $color-yellow;
+                    padding-left: 16px;
+                    padding-right: 16px;
+
+                }
+                
+                &__dialog {
+                    padding-left: 16px;
+                }
+        }
+    }
+
+}
+
+.main__chat-marker {
+    display: flex;
+    margin-top: 50px;
+    width: 40px;
+    height: 115px;
+    background-color: $color-yellow;
+    font-size: 19px;
+    line-height: 20px;
+    
+    
+    
+
+    p {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        margin: auto;
+    }
+}
+
+.chat-window__request {
+    display: flex;
+    flex-direction: row;
+    border: $color-yellow solid 1px;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+
+#chatRequest {
+    width: 80%;
+    height: 50px;
+    resize: none;
+    border: none;
+
+}
+
+
+
+
+
+.chat-window__dialog {
+    padding-left: 16px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.wework {
+    margin-bottom: 70px;
+    overflow: hidden;
+
+
+    
+
+    
+    &_block {
+        position: relative;
+        // margin: 0 5px;
+        overflow: hidden;
+        // margin-left: 10px;
+        // margin-right: 10px;
+
+        &:hover &-triangle {
+            border-top: 20px solid #000;
+            border-right: 20px solid #000;
+        }
+
+        &:hover &-button {
+            display: block;
+        }
+
+        &:hover &-text {
+            display: block;
+        }
+
+        &:hover &-caption {
+            display: none;
+        }
+
+        
+
+
+        &-triangle {
+            position: absolute;
+            text-align: right;
+            top: 0;
+            right: 4.5px;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border: 20px solid transparent;
+            border-top: 20px solid $color-yellow;
+            border-right: 20px solid $color-yellow;
+            z-index: 100;
+            transition: 0.3s;
+
+
+
+        }
+
+        &-img {
+            position: absolute;
+
+        }
+
+
+
+
+        i {
+            position: absolute;
+            top: 7px;
+            right: 12px;
+            font-size: 11px;
+            color: white;
+            z-index: 150;
+
+        }
+
+        &-caption{
+
+            z-index: 10;
+
+            h3 {
+                color: #ffffff;
+                width: 180px;
+                transition: 1.5s;
+                z-index: 2;
+
+            }
+
+
+            
+
+
+        }   
+    
+        &-discription{
+            background-color: $color-yellow;
+            position: absolute;
+            height: 310px;
+            opacity: 0;
+            width: 385px;
+            transition: 0.3s;
+            overflow: hidden;
+
+            &:hover {
+                opacity: 0.78;
+
+            }
+
+
+
+        }
+
+        &-overlay{
+            background-color: black;
+            position: absolute;
+            height: 310px;
+            opacity: 0.5;
+            width: 385px;
+            // transition: 0.3s;
+            overflow: hidden;
+            // z-index: 2;
+
+            
+        }
+
+        
+        &-button {
+            color:#fff;
+            width: 130px;
+            position: absolute;
+            background-color:#000;
+            right: 35px;
+            bottom: 30px;
+            display: none;
+            transition: 1.5s;
+        }
+
+        &-text {
+            position: absolute;
+            top: 40px;
+            left: 35px;
+            font-style: 20px;
+            display: none;
+        }
+    }
+}
+
+
+.weare {
+    height: 390px;
+    padding-top: 50px;
+
+        & h1 {
+            color: $color-yellow;
+        }
+
+        &_content {
+            color: #fff;
+            margin: 40px;
+
+            &-item {
+                color:white;
+                margin-bottom: 40px;
+                margin-top: 2px;
+            }
+        }
+
+        &_button {
+            display: block;
+            margin: 0 auto;
+        }
+
+
+
+}
+
+.whychoose {
+    margin-top: 50px;
+
+
+    &_row1 {
+        margin-top: 55px;
+    }
+
+    &_row2 {
+        margin-bottom: 40px;
+    }
+
+
+    &_check {
+        width: 30px;
+    }
+}
+
+
+.reviews {
+    height: 355px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+
+
+    &_overlay {
+        display: grid;
+        grid-template-columns: auto 400px auto;
+        height: 100%;
+        // position: relative;
+
+        &-item2 {
+            background-color: rgba(0, 0, 0, 0.73);
+        }
+
+
+        &-item2 {
+            background-color: #1d1d1d;
+        }
+        &-item3 {
+            background-color: #fff;
+            opacity: 0.4;
+        }
+    }
+
+    &_content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &-text {
+
+            padding-top: 40px;
+
+            &-highlighter {
+                display: inline;
+                color: $color-yellow;
+            }
+
+
+    
+
+            
+        }
+    }
+}
+
+
+
